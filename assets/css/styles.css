@@ -1,0 +1,20 @@
+/* line 4, ../sass/styles.scss */
+.enjoy-css {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: #0199d9;
+  -moz-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}

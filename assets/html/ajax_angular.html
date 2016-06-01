@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+	</title>
+	<script src="../js/angular.min.js"></script>
+	<script src="../js/ajax_angular.js"></script>          
+	<link rel="stylesheet" href="">
+
+</head>
+<body ng-app="ajax_app">
+
+
+
+<div ng-controller="ajaxFirst">
+	<div>
+		<label for="">Identificador</label>
+		<input type="text" ng-model="newPost.id">
+		<label for="">Titulo</label>
+		<input type="text" ng-model="newPost.title">
+		<label for="">Contenido</label>
+		<input type="text" ng-model="newPost.body">
+		<input type="button" value="Save" ng-click="addPost()">
+	</div>
+
+	<h2> {{error}} </h2>
+	<h2>Posts de consulta ajax</h2>
+	<section ng-repeat="post in posts">
+		<p> <strong> {{post.title}} </strong></p>
+		<p> {{post.body}} </p>		
+	</section>
+	
+</div>
+
+</body>
+</html>

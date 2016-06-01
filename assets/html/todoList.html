@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body ng-app="appToDoList">
+
+	<div class="container" ng-controller="controllerToDoList">
+		
+		<form class="form-horizontal" ng-submit="addActiv()">
+			<div class="form-group">
+				<input type="text" class="form-control" ng-model="newActiv.descripcion">
+			</div>
+			<div class="form-group">
+				<input type="datetime-local" class="form-control" ng-model="newActiv.fecha">
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Agregar">
+			</div>
+		</form>
+		
+		<div class="row">
+			<ul>
+				<li ng-repeat="act in todo">
+					{{act.descripcion}} - {{act.fecha | date: 'short'}}
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<script src="../js/angular.min.js" type="text/javascript" ></script>
+	<script src="../js/angular_localStorage.min.js" type="text/javascript"></script>
+	<script src="../js/todoList.js" type="text/javascript"></script>
+</body>
+</html>

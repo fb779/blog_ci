@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="..\css\bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/bootstrap-style.css" />
+    
+
+</head>
+<body ng-app="appFormulario">
+	<div ng-controller="controllerForm">
+		<div class="container"><h2>Example tab 2 (using standard nav-tabs)</h2></div>
+		<div id="exTab2" class="container">	
+			<ul class="nav nav-tabs">
+				<li class="active"> <a  href="#uno" data-toggle="tab">Overview <span class="glyphicon glyphicon-ok" ng-class="{'text-success': forma.nombre.$valid && forma.apellido.$valid}" ng-show="forma.nombre.$valid && forma.apellido.$valid"> </span> </a></li>
+				<li><a href="#dos" data-toggle="tab">Without clearfix	<span class="glyphicon glyphicon-ok" ng-class="{'text-success': forma.correo.$valid && forma.telefono.$valid}" ng-show="forma.correo.$valid && forma.telefono.$valid"> </span></a></li>
+				<li><a href="#tres" data-toggle="tab">Solution	<span class="glyphicon glyphicon-ok" ng-class="{'text-success': forma.direccion.$valid && forma.paginaWeb.$valid}" ng-show="forma.direccion.$valid && forma.paginaWeb.$valid" > </span></a></li>
+
+			</ul>
+			<form action="" name="forma" method="POST">
+				<div class="tab-content ">
+					<div class="tab-pane active" id="uno">
+						<h3 class="success">Mi primer panel en bootstrap 3</h3>
+						<span class="glyphicon glyphicon-ok"> </span>
+						<div class="container">
+							<div class="form-group col-md-6">
+								<label>Nombres</label>
+								<input type="text" class="form-control col-md-3" placeholder="Nombres" name="nombre" id="nombre" ng-model="usName" required>
+							</div>
+							<div class="form-group col-md-6">
+								<label class="">Apellidos</label>
+								<input type="text" class="form-control col-md-3" placeholder="Apellidos" name="apellido" id="apellido" ng-model="usLastName" required>
+							</div>
+
+						</div>
+					</div>
+					<div class="tab-pane" id="dos">
+						<h3 class="">Notice the gap between the content and tab after applying a background color</h3>
+						<div class="container">
+
+							<div class="form-group col-md-6">
+								<label class="">Email</label>
+								<input type="email" class="form-control col-md-3" placeholder="Email" name="correo" id="correo" ng-model="usEmail" required>
+							</div>
+							<div class="form-group col-md-6">
+								<label class="">Telefono</label>
+								<input type="tel" class="form-control col-md-3" placeholder="Telefono" name="telefono" id="telefono" ng-model="usPhone" required>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tres">
+						<h3>add clearfix to tab-content (see the css)</h3>
+						<div class="container">
+
+							<div class="form-group col-md-6">
+								<label class="">Dirección</label>
+								<input type="text" class="form-control col-md-3" placeholder="Dirección" name="direccion" id="direccion" ng-model="usDireccion" required >
+							</div>
+							<div class="form-group col-md-6">
+								<label class="">Pagina Web</label>
+								<input type="text" class="form-control col-md-3" placeholder="Pagina Web" name="paginaWeb" id="paginaWeb" ng-model="usWebSite" required >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6">
+						<input type="submit" class="btn btn-primary" value="Dirección" name="direccion" id="direccion" ng-model="usDireccion" ng-disabled="forma.$invalid" required >
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="..\js\jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="..\js\angular.min.js" type="text/javascript"></script>
+	<script src="..\js\bootstrap.min.js" type="text/javascript"></script>
+	<script src="..\js\formulario.js" type="text/javascript"></script>
+</body>
+</html>
+

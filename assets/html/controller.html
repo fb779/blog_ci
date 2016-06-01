@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<style type="text/css" media="screen">
+		.success {
+			border-color: green;
+		}
+
+		.danger {
+			border-color: red;
+		}
+	</style>
+	<script src="../js/jquery_1123.min.js"></script>
+	<script src="../js/angular.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/controller.js"></script>
+</head>
+<body ng-app="appFirstController">
+	<div ng-controller="firstController">
+		<div class="row text-center">
+			<span> <h3>	Agregar Comentario a la lista </h3> </span>
+		</div>
+		<div class="container"> 
+			<form action="" class="form-inline">
+				<div class="input-group col-md-4">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+					<input type="text" class="{{errores.comentario}} form-control" name="comentario" placeholder="Comentario" ng-model="newComent.comentario">
+					<span class="input-group-addon" ng-show="formLogin.comentario.$invalid"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+				<div class="input-group col-md-4">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+					<input type="text" class="{{errores.username}} form-control" name="username" placeholder="Quien Comenta ?" ng-model="newComent.username">
+					<span class="input-group-addon" ng-show="formLogin.username.$invalid"><span class="glyphicon glyphicon-asterisk"></span></span>
+				</div>
+				
+				<div class="input-group col-md-3">
+					<button type="button" class="form-control btn btn-default" ng-click="addComent()">Agregar nuevo Comentario</button>
+				</div>
+			</form>
+		</div>
+		<hr>
+		<p>
+			<h3>Comentarios</h3>
+			<p ng-repeat="comentario in comentarios">
+				{{comentario.comentario}} - <strong>{{comentario.username}}</strong>
+			</p>
+		</p>
+
+		
+	</div>
+</body>
+</html>
