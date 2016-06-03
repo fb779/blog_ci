@@ -67,7 +67,8 @@ local.properties
 !*/cache/index.html
 !*/cache/.htaccess
 CI_Autocomplete.php
-*.db*
+*.db
+*.db-journal
 
 ### Sass ###
 .sass-cache/

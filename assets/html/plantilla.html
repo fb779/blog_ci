@@ -1,30 +1,57 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
-	<div id="page" class="container-fluid">
-		<div id="header" class="app_contenedor">
-			<section class="col-md-3 text-center">Imagen Muestra</section>
-			<section class="col-md-9 text-right">
-				<div>Encabezado parte derecha</div>
-				<div>Encabezado parte derecha</div>
-			</section>
-		</div>
-		<div id="contenido" class="container">
-			<section>contenido de la pagina</section>
-		</div>
-		<div id="footer" class="container enjoy-css">pie de pagina con info</div>
-	</div>
-
-
-	<script src="../js/jquery_1123.min.js" type="text/javascript"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	<!--link rel="stylesheet" type="text/css" href="css/normalizer.css"-->
+	<script src="../js/jquery-1.12.3.min.js" type="text/javascript"></script>
 	<script src="../js/angular.min.js" type="text/javascript"></script>
+	<script src="../js/ETES.js" type="text/javascript"></script>
 	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+	
+	<title>titulo</title>
+</head>
+
+<body ng-app="app_etes">
+	<div class="container-fluid">
+		<div class="container-fluid">
+			<div id="header" class="row">
+				<div class="text-center">
+					<img class=" media-object" src="../img/logo.png" alt="">
+				</div>
+				<div class="ap_text text-right">
+					<articles class="ap_row row">{title}</articles>
+				<!--articles class="ap_row row">informacion de logue</articles>
+				<articles class="ap_row row">periodo</articles-->
+				</div>
+			</div>
+			<div class="ap_line row"></div>
+
+			<div id="naigation" class="row">
+				<div>
+					<ul class="nav nav-tabs">
+						<li id="item1" role="presentation" class="active">
+							<a href="">
+								link 
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="footer" class="row">
+				<div class="ap_footer col-md-9 text-center">
+					<p>
+						DANE: Carrera 59 No. 26-70 Interior I - CAN. Conmutador (571) 5978300 - Fax (571) 5978399
+						Línea gratuita de atención 01-8000-912002. ó (571) 5978300 Exts. 2532 - 2605
+					</p>
+				</div>
+				<div class="ap_footer col-md-3 text-center">
+					Redes sociales
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

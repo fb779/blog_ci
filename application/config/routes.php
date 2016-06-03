@@ -54,3 +54,6 @@ $route['default_controller'] = 'Home';
 // $route['default_controller'] = 'Login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+//$route['URL'] = 'Controlador/metodo/parametro'
+$route['home/lista_articulos'] = 'home/lista_articulos';
+$route['home/detalle/(:any)'] = 'home/detalle/$1';

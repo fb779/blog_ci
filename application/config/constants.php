@@ -113,4 +113,4 @@ unset($base_url, $base_uri);
  * Definicion de constatntes globales para la aplicación
  */
 
-define('TITULO_APP', 'Titulo de la encuesta o aplicacion Archivo constantes');
+define('TITULO_APP', 'Titulo de la aplicacion Archivo applications/config/constantes');
