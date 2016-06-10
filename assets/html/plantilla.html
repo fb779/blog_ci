@@ -13,45 +13,117 @@
 	<title>titulo</title>
 </head>
 
-<body ng-app="app_etes">
-	<div class="container-fluid">
-		<div class="container-fluid">
-			<div id="header" class="row">
-				<div class="text-center">
-					<img class=" media-object" src="../img/logo.png" alt="">
-				</div>
-				<div class="ap_text text-right">
-					<articles class="ap_row row">{title}</articles>
-				<!--articles class="ap_row row">informacion de logue</articles>
-				<articles class="ap_row row">periodo</articles-->
-				</div>
+<body>
+	<!-- inicio cabecera -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-5">
+				<h3>este es el titulo de la cabecera</h3>
 			</div>
-			<div class="ap_line row"></div>
 
-			<div id="naigation" class="row">
-				<div>
+			<div class="col-xs-5 col-xs-offset-2 text-right">
+				<h3>este es el titulo de la cabecera</h3>
+			</div>
+		</div>
+	</div>
+	<!-- fin cabecera -->
+	<!-- inicio navegacion -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row">
 					<ul class="nav nav-tabs">
-						<li id="item1" role="presentation" class="active">
-							<a href="">
-								link 
-							</a>
-						</li>
+						<li class="active"> <a  href="#uno" data-toggle="tab">Overview <span class="glyphicon glyphicon-ok"> </span> </a></li>
+						<li><a href="#dos" data-toggle="tab">Without clearfix	<span class="glyphicon glyphicon-ok"> </span></a></li>
+						<li><a href="#tres" data-toggle="tab">Solution	<span class="glyphicon glyphicon-ok"> </span></a></li>
 					</ul>
-				</div>
-			</div>
-
-			<div id="footer" class="row">
-				<div class="ap_footer col-md-9 text-center">
-					<p>
-						DANE: Carrera 59 No. 26-70 Interior I - CAN. Conmutador (571) 5978300 - Fax (571) 5978399
-						Línea gratuita de atención 01-8000-912002. ó (571) 5978300 Exts. 2532 - 2605
-					</p>
-				</div>
-				<div class="ap_footer col-md-3 text-center">
-					Redes sociales
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- fin navegacion -->
+	<!-- inicio Contenido -->
+	<div class="container" >
+		<div class="row">
+			<!-- inicio Navegacion lateral -->
+			<!--div class="col-xs-2">
+				<p>
+					<ul>
+						<li>Item de menu nav 1</li>
+						<li>Item de menu nav 2</li>
+						<li>Item de menu nav 3</li>
+						<li>Item de menu nav 4</li>
+						<li>Item de menu nav 5</li>
+					</ul>
+				</p>
+			</div-->
+			<!-- fin Navegacion lateral -->
+			<div class="col-xs-12">
+				<form action="" name="forma" method="POST" class="form-horizontal">
+				<div class="tab-content row">
+					<div class="tab-pane active" id="uno">
+						<h3 class="">Mi primer panel en bootstrap 3</h3>
+						<div class="">
+							<div class="form-group col-md-5">
+								<label>Nombres</label>
+								<input type="text" class="form-control" placeholder="Nombres" name="nombre" id="nombre" ng-model="usName" required>
+							</div>
+							<div class="form-group col-md-5 col-md-offset-2">
+								<label class="">Apellidos</label>
+								<input type="text" class="form-control" placeholder="Apellidos" name="apellido" id="apellido" ng-model="usLastName" required>
+							</div>
+
+						</div>
+					</div>
+					<div class="tab-pane" id="dos">
+						<h3 class="">Notice the gap between the content and tab after applying a background color</h3>
+						<div class="">
+
+							<div class="form-group col-md-6">
+								<label class="">Email</label>
+								<input type="email" class="form-control col-md-3" placeholder="Email" name="correo" id="correo" ng-model="usEmail" required>
+							</div>
+							<div class="form-group col-md-6">
+								<label class="">Telefono</label>
+								<input type="tel" class="form-control col-md-3" placeholder="Telefono" name="telefono" id="telefono" ng-model="usPhone" required>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="tres">
+						<h3>add clearfix to tab-content (see the css)</h3>
+						<div class="">
+
+							<div class="form-group col-md-6">
+								<label class="">Dirección</label>
+								<input type="text" class="form-control col-md-3" placeholder="Dirección" name="direccion" id="direccion" ng-model="usDireccion" required >
+							</div>
+							<div class="form-group col-md-6">
+								<label class="">Pagina Web</label>
+								<input type="text" class="form-control col-md-3" placeholder="Pagina Web" name="paginaWeb" id="paginaWeb" ng-model="usWebSite" required >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group col-md-6">
+						<input type="submit" class="btn btn-primary" value="Dirección" name="direccion" id="direccion" ng-model="usDireccion" ng-disabled="forma.$invalid" required >
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- fin Contenido -->
+	
+	<!-- inicio Footer -->
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, cupiditate quos. Vel cumque iusto incidunt, dolore nihil hic provident. Placeat illum temporibus, tempore rem. Eius obcaecati, illum quis quisquam aperiam.</p>
+			</div>
+		</div>
+	</div>
+	<!-- inicio Footer -->
+
 </body>
 </html>
