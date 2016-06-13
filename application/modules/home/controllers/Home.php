@@ -11,7 +11,7 @@ class Home extends MX_Controller {
 
 	function __construct() {
 		parent::__construct();
-		$this->output->enable_profiler(FALSE);
+		//$this->output->enable_profiler(TRUE);
 		$this->load->model('Articulos_model');
 		$this->datos['header'] = array(
 			'static' => BASE_STATICS,
@@ -24,6 +24,7 @@ class Home extends MX_Controller {
         		//'detalle_articulo' => array('link' => anchor('home/detalle_articulo', 'Detalle articulo'),'activo' => ''), 
 			)
 		);
+		//$this->datos['menu'] = MENUS;
 		$this->datos['footer'] = array();
 	}
 	
@@ -44,11 +45,11 @@ class Home extends MX_Controller {
 
 		$query = $this->Articulos_model->listar_articulos();
 		
-		$articuos = array();
-		
 		foreach ($query as $item) {
-			//$item->url = anchor('home/detalle_articulo/'.$item->url, url_title(convert_accented_characters('Detalle')), $this->atts);
-			$item->url = anchor('home/detalle_articulo/'.$item->id_articulo, url_title(convert_accented_characters('Detalle')), $this->atts);
+			//$item->url = anchor('home/articulo/'.$item->id_articulo, url_title(convert_accented_characters('Detalle')), $this->atts);
+			
+			$item->url = anchor('home/articulo/'.url_title(convert_accented_characters($item->link),'-'), url_title(convert_accented_characters('Detalle')), $this->atts);
+			//$item->url = url_title('home/detalle_articulo/'.$item->nombre);
 			$articulos[] = $item;
 		}
 
@@ -61,13 +62,27 @@ class Home extends MX_Controller {
 		$this->parser->parse('loadTemplates', $this->datos, TRUE);
 	}
 
- 	function detalle_articulo($id_articulo) {
+ 	// function articulo($id_articulo) {
+ 	// 	//$this->datos['menu']['navigate']['lista_articulos']['activo'] = 'class="active"';
+ 		
+ 	// 	$id_art = $this->security->xss_clean($id_articulo);
+ 	// 	$articulo = $this->Articulos_model->detalle_articulo($id_art);
+
+ 	// 	//echo $articulo->nombre;
+
+ 	// 	$this->datos['template'] = 'detalle_articulo';
+ 	// 	$this->datos['dt'] = $articulo;
+ 	// 	//$this->datos['dt']['jsonArticulos'] = json_encode($articulo);
+ 		
+		// $this->parser->parse('loadTemplates', $this->datos);
+
+ 	// }
+
+ 	function articulo($link) {
  		//$this->datos['menu']['navigate']['lista_articulos']['activo'] = 'class="active"';
  		
- 		$id_art = $this->security->xss_clean($id_articulo);
- 		$articulo = $this->Articulos_model->detalle_articulo($id_art);
-
- 		//echo $articulo->nombre;
+ 		$link_limpio = $this->security->xss_clean($link);
+ 		$articulo = $this->Articulos_model->detalle_articulo_2($link_limpio);
 
  		$this->datos['template'] = 'detalle_articulo';
  		$this->datos['dt'] = $articulo;

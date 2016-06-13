@@ -19,7 +19,16 @@ class Articulos_model extends CI_Model {
 
 	// Consulta el articulo por su Id de articulo
 	function detalle_articulo($id_articulo) {
+ 		//$this->db->select('fecha,contenido');
  		$this->db->where('id_articulo', $id_articulo);
+ 		$contulta = $this->db->get('t_articulo');
+		//return $contulta->row();
+		return $contulta->row_array(); // retorno en forma de arreglo
+ 	}
+
+ 	function detalle_articulo_2($link) {
+ 		//$this->db->select('link');
+ 		$this->db->where('link', $link);
  		$contulta = $this->db->get('t_articulo');
 		//return $contulta->row();
 		return $contulta->row_array(); // retorno en forma de arreglo

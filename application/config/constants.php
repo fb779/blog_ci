@@ -114,3 +114,12 @@ unset($base_url, $base_uri);
  */
 
 define('TITULO_APP', 'Titulo de la aplicacion Archivo applications/config/constantes');
+
+// define('MENUS', 
+// 	array(
+// 		'navigate' => array(
+// 			'home' => array('link' => anchor('home', 'Home'), 'activo' => ''), 
+// 			'lista_articulos' => array('link' => anchor('home/lista_articulos', 'Lista articulos'),'activo' => ''),
+//         		//'detalle_articulo' => array('link' => anchor('home/detalle_articulo', 'Detalle articulo'),'activo' => ''), 
+// 			)
+// 		));

@@ -14,7 +14,7 @@
 		</div>
 	</form-->
 <div id="content" class="ap_content row text-center" ng-controller="NewUserController">
-<form action="{{url}}" name="userForm" class="form-horizontal" novalidate>
+<form action="{url}" name="userForm" class="form-horizontal" novalidate>
 	<div class="form-group" >
 		<div class="col-md-3"></div>
 		<div class="input-group col-md-6" ng-class="{ 'has-error': userForm.name.$invalid && userForm.name.$touched }">

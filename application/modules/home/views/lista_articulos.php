@@ -1,7 +1,8 @@
-<div id="content" class="">
-	<!--h1>Este es un mensaje de contenido para la pagina de prueba</h1-->
+<!-- inicio Contenido -->
+<div class="container">
 	<div class="row">
-		<div class="col-xs-12 well">
+		<div class="col-md-12">
+			<!--h1>Este es un mensaje de contenido para la pagina de prueba</h1-->
 			<ul>
 				{articulos}
 				<li>
@@ -17,3 +18,4 @@
 		</div>
 	</div>
 </div>
+<!-- fin Contenido -->
