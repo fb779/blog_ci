@@ -18,5 +18,10 @@ Línea gratuita de atención 01-8000-912002. ó (571) 5978300 Exts. 2532 - 2605
 		</div>
 	</div>
 	<!-- inicio Footer -->
+
+	<script src="{static}js/jquery-1.12.3.min.js" type="text/javascript"></script>
+	<script src="{static}js/angular.min.js" type="text/javascript"></script>
+	<script src="{static}js/ETES.js" type="text/javascript"></script>
+	<script src="{static}js/bootstrap.min.js" type="text/javascript"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@ class Home extends MX_Controller {
 			)
 		);
 		//$this->datos['menu'] = MENUS;
-		$this->datos['footer'] = array();
+		$this->datos['footer'] = array('static' => BASE_STATICS,);
 	}
 	
 	function index()	{

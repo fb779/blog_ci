@@ -31,6 +31,14 @@ class Articulos_model extends CI_Model {
  		$this->db->where('link', $link);
  		$contulta = $this->db->get('t_articulo');
 		//return $contulta->row();
-		return $contulta->row_array(); // retorno en forma de arreglo
+		
+		if ($contulta->num_rows()>0){
+			//return $contulta->row_array(); // retorno en forma de arreglo
+			$query = $contulta->row();
+			$query->articulo = TRUE;
+			return $query;
+		} else {
+			return array ('articulo' => FALSE);
+		}
  	}
 }
